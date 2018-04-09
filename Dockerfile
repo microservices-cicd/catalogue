@@ -19,7 +19,7 @@ RUN	addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \
 	apk add --update libcap
 
 WORKDIR /
-COPY --from=0 /app /app
+COPY /app /app
 COPY images/ /images/
 
 RUN	chmod +x /app && \
